@@ -2,7 +2,7 @@
 using Photon.Pun;
 using System.Collections;
 
-namespace GroupJam.FWork
+namespace GroupJam
 {
     public class PlayerMove : MonoBehaviour
     {

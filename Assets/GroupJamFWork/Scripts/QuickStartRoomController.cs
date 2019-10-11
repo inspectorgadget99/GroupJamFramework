@@ -1,7 +1,7 @@
 using Photon.Pun;
 using UnityEngine;
 
-namespace GroupJam.FWork
+namespace GroupJam
 {
     public class QuickStartRoomController : MonoBehaviourPunCallbacks
     {

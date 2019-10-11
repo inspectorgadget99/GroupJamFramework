@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-namespace GroupJam.FWork
+namespace GroupJam
 {
     public class PlayerLook : MonoBehaviour
     {
@@ -11,10 +11,10 @@ namespace GroupJam.FWork
         private float xAxisClamp = 0.0f;
 
         [SerializeField]
-        private float mouseSensitivityX = 5f;
+        private float mouseSensitivityX = 5.0f;
 
         [SerializeField]
-        private float mouseSensitivityY = 2f;
+        private float mouseSensitivityY = 2.0f;
 
         [SerializeField]
         private bool invertMouse = false;

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace GroupJam.FWork
+namespace GroupJam
 {
     public class CameraWork : MonoBehaviour    {
         public Transform targetTransform; // player head

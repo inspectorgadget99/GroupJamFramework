@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-namespace GroupJam.FWork
+namespace GroupJam
 {
     public class LockCursor : MonoBehaviour
     {

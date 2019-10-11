@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-namespace GroupJam.FWork
+namespace GroupJam
 {
     public class GameSetupController : MonoBehaviour
     {
