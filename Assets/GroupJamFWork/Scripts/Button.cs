@@ -14,7 +14,7 @@ namespace GroupJam
         public override void OnActivate(PlayerInteraction user)
         {
             // check if the object is in use first
-            if (currUser != null)
+            if (currUser == null)
             {
                 // update who is using the item so no one else can use it while the code is running
                 currUser = user;
