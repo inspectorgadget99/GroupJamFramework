@@ -8,7 +8,15 @@ public class PlayerData : MonoBehaviour
     [SerializeField]
     private TextMesh floatingText;
 
+    private PhotonView photonView;
     private Color playerColor;
+
+    void Awake()
+    {
+        photonView = GetComponent<PhotonView>();
+    }
+
+
 
     private void Start()
     {
@@ -17,11 +25,11 @@ public class PlayerData : MonoBehaviour
 
     public void UpdateNickname()
     {
-        floatingText.text = PhotonNetwork.NickName;
+        floatingText.text = photonView.Owner.NickName;
     }
 
     public string GetName()
     {
-        return PhotonNetwork.NickName;
+        return photonView.Owner.NickName;
     }
 }

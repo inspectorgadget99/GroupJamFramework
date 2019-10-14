@@ -12,8 +12,6 @@ namespace GroupJam
         [SerializeField]
         private GameObject loadingText; //text shown while connecting to Photon servers.
         [SerializeField]
-        private GameObject namePromptText; //text shown prompting user to enter nickname.
-        [SerializeField]
         private GameObject nicknameFieldObject; //nickname field
         [SerializeField]
         private GameObject hostSessionButton; //button used for joining a game.
