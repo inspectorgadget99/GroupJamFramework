@@ -3,6 +3,7 @@ using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GroupJam
 {
@@ -10,6 +11,10 @@ namespace GroupJam
     {
         [SerializeField]
         private GameObject loadingText; //text shown while connecting to Photon servers.
+        [SerializeField]
+        private GameObject namePromptText; //text shown prompting user to enter nickname.
+        [SerializeField]
+        private GameObject nicknameFieldObject; //nickname field
         [SerializeField]
         private GameObject hostSessionButton; //button used for joining a game.
         [SerializeField]
@@ -23,6 +28,20 @@ namespace GroupJam
 
         private int joinAttemptCount;
         private bool cancelRequested = false;
+        private InputField nicknameField;
+
+        private void Start()
+        {
+            nicknameField = nicknameFieldObject.GetComponent<InputField>();
+            nicknameFieldObject.SetActive(true);
+            nicknameField.text = "User" + System.Math.Floor(Random.Range(1.0f, 1000.0f));
+            SetNickName();
+        }
+
+        public void SetNickName()
+        {
+            PhotonNetwork.NickName = nicknameField.text;
+        }
 
         public override void OnConnectedToMaster() //Callback function for when the first connection is established successfully.
         {

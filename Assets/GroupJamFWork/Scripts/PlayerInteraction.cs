@@ -11,15 +11,18 @@ namespace GroupJam
 
         private PhotonView photonView;
         private PlayerData pData;
+        private string nickname;
 
         void Awake()
         {
             photonView = GetComponentInParent<PhotonView>();
             pData = GetComponent<PlayerData>();
+            nickname = PhotonNetwork.NickName;
         }
 
         void LateUpdate()
         {
+            nickname = PhotonNetwork.NickName;
             if (photonView.IsMine)
             {
                 HandleClick();
@@ -45,7 +48,7 @@ namespace GroupJam
 
         public string GetName()
         {
-            return pData.PlayerName;
+            return pData.GetName();
         }
     }
 }

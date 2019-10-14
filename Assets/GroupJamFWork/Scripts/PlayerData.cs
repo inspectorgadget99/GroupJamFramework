@@ -5,9 +5,23 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-    private string playerName;
+    [SerializeField]
+    private TextMesh floatingText;
+
     private Color playerColor;
 
-    public string PlayerName { get => playerName; set => playerName = value; }
-    public Color PlayerColor { get => playerColor; set => playerColor = value; }
+    private void Start()
+    {
+        UpdateNickname();
+    }
+
+    public void UpdateNickname()
+    {
+        floatingText.text = PhotonNetwork.NickName;
+    }
+
+    public string GetName()
+    {
+        return PhotonNetwork.NickName;
+    }
 }
