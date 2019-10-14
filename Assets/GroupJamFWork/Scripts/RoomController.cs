@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GroupJam
 {
-    public class QuickStartRoomController : MonoBehaviourPunCallbacks
+    public class RoomController : MonoBehaviourPunCallbacks
     {
         [SerializeField]
         private int multiplayerSceneIndex; //Number for the build index to the multiplay scene.
