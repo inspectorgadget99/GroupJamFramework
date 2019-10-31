@@ -30,9 +30,15 @@ namespace GroupJam
             }
         }
 
+
+
+            void Update()
             {
+                if (photonView.IsMine)
+                {
+                    MovePlayer();
+                }
             }
-        }
 
 
 
@@ -50,5 +56,4 @@ namespace GroupJam
                 }
             }
         }
-    }
-}
+    
