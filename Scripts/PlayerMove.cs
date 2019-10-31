@@ -13,6 +13,8 @@ namespace GroupJam
         private CharacterController charControl;
         private PhotonView photonView;
 
+
+
         void Awake()
         {
             cameraWork = GetComponent<CameraWork>();
@@ -28,24 +30,25 @@ namespace GroupJam
             }
         }
 
-        void Update()
-        {
-            if (photonView.IsMine)
             {
-                MovePlayer();
             }
         }
 
-        void MovePlayer()
-        {
-            float horiz = Input.GetAxis("Horizontal");
-            float vert = Input.GetAxis("Vertical");
 
-            Vector3 moveDirSide = transform.right * horiz * walkSpeed;
-            Vector3 moveDirForward = transform.forward * vert * walkSpeed;
 
-            charControl.SimpleMove(moveDirSide);
-            charControl.SimpleMove(moveDirForward);
+                void MovePlayer()
+                {
+                    float horiz = Input.GetAxis("Horizontal");
+                    float vert = Input.GetAxis("Vertical");
+
+                    Vector3 moveDirSide = transform.right * horiz * walkSpeed;
+                    Vector3 moveDirForward = transform.forward * vert * walkSpeed;
+
+
+                    charControl.SimpleMove(moveDirSide);
+                    charControl.SimpleMove(moveDirForward);
+                }
+            }
         }
     }
 }
